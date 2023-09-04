@@ -13,12 +13,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/image-product-desktop.jpg)
+![](./design/desktop-design.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://github.com/talithafrsc/frontend-mentor-challenge/tree/main/product-preview-card-component-main)
+- [Live site URL](https://frsc-product-preview-card-component.vercel.app/)
 
 ## My process
 
