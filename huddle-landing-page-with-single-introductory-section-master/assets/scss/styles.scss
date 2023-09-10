@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400&display=swap");
+
+
+$color-violet: hsl(257, 40%, 49%);
+$color-magenta: hsl(300, 69%, 71%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2em;
+    background-color: $color-violet;
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.page-heading {
+    margin-bottom: 4rem;
+
+    img {
+        width: 50%;
+    }
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.container-image {
+    text-align: center;
+
+    img {
+        width: 90%;
+    }
+}
+
+.container-desc {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    h1 {
+        font-family: "Poppins";
+        color: white;
+    }
+
+    p {
+        font-family: "Open Sans";
+        color: white;
+    }
+
+    button {
+        font-family: "Poppins";
+        border-radius: 25px;
+        color: $color-violet;
+        padding: 0.75rem 2rem;
+        border: 0;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        width: 60%;
+        font-size: 0.8rem;
+        margin: auto;
+
+        &:hover {
+            background-color: $color-magenta;
+            color: white;
+        }
+    }
+}
+
+.social-buttons {
+    text-align: center;
+
+    button {
+        border-color: white;
+        color: white;
+        border-radius: 50%;
+        border-width: 1px;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        margin: 4rem 0.25rem 0rem;
+        border-style: solid;
+        background: transparent;
+        font-size: 1rem;
+
+        &:hover {
+            border-color: $color-magenta;
+            color: $color-magenta;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background-image: url('../images/bg-desktop.svg');
+        background-size: cover;
+    }
+
+    .page-heading {
+        margin-bottom: 4rem;
+    
+        img {
+            width: 200px;
+        }
+    }
+
+    .container {
+        grid-auto-flow: column;
+        grid-template-columns: 3fr 2fr;
+        justify-content: space-between;
+        max-width: 100%;
+        width: 1200px;
+    }
+
+    .container-image {
+        text-align: left;
+    }
+
+    .container-desc {
+        text-align: left;
+        margin-right: 3rem;
+
+        button {
+            width: 40%;
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+
+    .social-buttons {
+        text-align: right;
+        margin-right: 3rem;
+        display: block;
+
+        button {
+            margin-top: 0rem !important;
+        }
+    }
+}
