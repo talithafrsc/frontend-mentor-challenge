@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --clr-orange: hsl(25, 97%, 53%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(217, 12%, 63%);
+    --clr-medium-grey: hsl(216, 12%, 54%);
+    --clr-dark-blue: hsl(213, 19%, 18%);
+    --clr-darker-blue: hsl(215, 16%, 13%);
+    --clr-darkest-blue: hsl(216, 12%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass";
+}
+
+body {
+    background-color: var(--clr-darkest-blue);
+    color: var(--clr-white);
+    display: grid;
+    font-size: 15px;
+    height: 100vh;
+    place-content: center;
+}
+
+.card {
+    background-image: linear-gradient(var(--clr-dark-blue), var(--clr-darker-blue));
+    border-radius: 25px;
+    display: grid;
+    gap: 0.8em;
+    margin: auto;
+    padding: 2em 2.5em;
+    width: 400px;
+}
+
+.icon-star {
+    aspect-ratio: 1 / 1;
+    background-color: var(--clr-dark-blue);
+    border-radius: 50%;
+    display: block;
+    filter: brightness(110%);
+    margin-bottom: 1em;
+    padding: 1em;
+    width: min-content;
+}
+
+.icon-star img {
+    aspect-ratio: 1 /1;
+    display: block;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    color: var(--clr-medium-grey);
+    line-height: 1.5em;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.rate {
+    background-color: var(--clr-dark-blue);
+    padding: 1.3em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border-style: hidden;
+    color: var(--clr-light-grey);
+    font-size: 1.1em;
+    line-height: 0px;
+}
+
+.ratings button:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-orange);
+}
+
+.active {
+    color: var(--clr-white);
+    background-color: var(--clr-light-grey);
+}
+
+.submit {
+    background-color: var(--clr-orange);
+    border-radius: 25px;
+    border-style: none;
+    color: var(--clr-white);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-top: 1em;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+}
+
+.submit:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+}
+
+.success {
+    text-align: center;
+    padding: 3em 2em;
+}
+
+.hide {
+    display: none;
+}
+
+.show-ratings {
+    background-color: var(--clr-dark-blue);
+    border-radius: 25px;
+    color: var(--clr-orange);
+    display: inline-block;
+    filter: brightness(110%);
+    margin: 1em;
+    padding: 0.5em 1.25em;
+    width: fit-content;
+}
