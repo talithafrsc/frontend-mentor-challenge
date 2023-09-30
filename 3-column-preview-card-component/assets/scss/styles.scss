@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca:400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Display:700&display=swap");
+
+$color-orange: hsl(31, 77%, 52%);
+$color-dark-cyan: hsl(184, 100%, 22%);
+$color-very-dark-cyan: hsl(179, 100%, 13%);
+
+$color-white: hsla(0, 0%, 100%, 0.75);
+$color-gray: hsl(0, 0%, 95%);
+
+$font-title: "Big Shoulders Display";
+$font-paragraph: "Lexend Deca"; 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    font-size: 15px;
+    min-height: 100vh;
+    place-content: center;
+}
+
+p {
+    color: $color-white;
+    font-family: $font-paragraph;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    margin-bottom: 3em;
+}
+
+img {
+    display: block;
+    width: 3.5em;
+}
+
+.btn-learn-more {
+    align-self: flex-start;
+    background-color: white;
+    border-color: $color-white;
+    border-radius: 25px;
+    border-style: solid;
+    font-family: $font-paragraph;
+    padding: 0.75em 2em;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-white;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        padding:2.5em;
+        width: 17em;
+    }
+
+    div:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    div:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    &-title {
+        color: white;
+        font-family: $font-title;
+        margin-top: 0.2em;
+        text-transform: uppercase;
+    }
+
+    &-sedans {
+        background-color: $color-orange;
+    
+        & > button {
+            color: $color-orange;
+        }
+    }
+
+    &-suvs {
+        background-color: $color-dark-cyan;
+    
+        & > button {
+            color: $color-dark-cyan;
+        }
+    }
+
+    &-luxury {
+        background-color: $color-very-dark-cyan;
+    
+        & > button {
+            color: $color-very-dark-cyan;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .card {
+        flex-direction: row;
+
+        div:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        
+        div:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+}
+
+.attribution { 
+    font-family: $font-paragraph;
+    font-size: 11px; 
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%); 
+    }
+}
